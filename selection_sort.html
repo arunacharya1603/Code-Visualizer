@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Visualizer</title>
+    <link rel="stylesheet" href="Sorting.css">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+</head>
+<style>
+    .header h1 {
+      font-size: 25px;
+    }
+    nav {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 660px) {
+      header {
+        display: flex;
+        flex-direction: column;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      nav ul {
+        height: 100px;
+        list-style-type: none;
+        padding: 0;
+        margin-top: 23px;
+        margin-bottom: -20px;
+      }
+    }
+
+    @media screen and (max-width: 540px) {
+      h1 {
+        margin-top: 19rem;
+        margin-bottom: -20px;
+        font-size: 24px;
+        color: #333;
+      }
+
+      nav {
+        height: 17rem;
+      }
+
+      ul {
+        gap: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+<body>
+
+    <header>
+        <h1>Sorting Algorithm Visualizer</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bubble_sort.html">Bubble Sort</a></li>
+                <li><a href="insertion_sort.html">Insertion Sort</a></li>
+                <li><a href="selection_sort.html">Selection Sort</a></li>
+                <li><a href="quick_sort.html">Quick Sort</a></li>
+                <li><a href="merge_sort.html">Merge Sort</a></li>
+                <!-- Add more sorting algorithms here -->
+            </ul>
+        </nav>
+    </header>
+
+
+    <h1>Selection Sorting Visualizer</h1>
+    <div id="container"></div>
+
+    <hr>
+
+    <div>
+        <button onclick="init()">Generate</button>
+        <button id="playButton" onclick="togglePlay()">Play</button>
+        <input type="range" min="1" max="1000" value="1000" id="speedSlider" onchange="updateSpeed(this.value)">
+    </div>
+
+    <script src="insertionSorting.js"></script>
+</body>
+</html>
